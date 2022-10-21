@@ -143,8 +143,10 @@ sudo systemctl status node-exporter
 ```
 sudo -i
 cd /etc/prometheus
+```
 
 2. change the target in prometheus.yaml to the ip-addres of the ec2 you want to monitor. For example
+
 ```
 
 global:
@@ -159,7 +161,9 @@ scrape_configs:
   - targets: ['localhost:9090'] => - targets: ['3.24.23.45:9090']
 
 ```
+
 3. Restart prometheus service
+
 ```
 
 sudo systemctl restart prometheus
@@ -167,6 +171,7 @@ sudo systemctl restart prometheus
 ```
 
 ## Service Discovery
+
 This is used to monitor all ec2 instances in a particular AZ
 
 1. Go to ~/etc/prometheus/prometheus.yml and replace with the following code.
@@ -190,9 +195,10 @@ scrape_configs:
 ```
 
 ## Installin Grafana
-1. create a file and name it install-grafana.sh and add the following code
-```
 
+1. create a file and name it install-grafana.sh and add the following code
+
+```
 sudo apt-get install -y adduser libfontconfig1
 wget https://dl.grafana.com/oss/release/grafana_7.3.4_amd64.deb
 sudo dpkg -i grafana_7.3.4_amd64.deb
@@ -202,7 +208,9 @@ sudo systemctl status grafana-server
 sudo systemctl enable grafana-server.service
 
 ```
+
 2. Run the code using
+
 ```
 
 sudo ./install-grafana.sh
@@ -210,4 +218,7 @@ sudo ./install-grafana.sh
 ```
 
 3. Open up port 3000 on your ec2 instance
+
+```
+
 ```
