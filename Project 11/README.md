@@ -13,6 +13,8 @@ kops update cluster --name kims.oshabz.name.ng --state=s3://kops-k8-2022 --yes
 
 kops validate cluster --name kims.oshabz.name.ng --state=s3://kops-k8-2022
 
+kops delete cluster --name kims.oshabz.name.ng --state=s3://kops-k8-2022 --yes 
+
 ```
 
 2. Create a volume
@@ -27,4 +29,4 @@ kubectl node node-name | grep us-east-1
 kubectl label nodes node-name zone=us-east-1a
 ```
 
-4. 
+4. Add tag to the volume created
