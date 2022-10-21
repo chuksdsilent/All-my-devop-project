@@ -219,6 +219,38 @@ sudo ./install-grafana.sh
 
 3. Open up port 3000 on your ec2 instance
 
-```
+![grafane](https://user-images.githubusercontent.com/18073289/197290552-9f9ea95b-97dc-4b52-b949-8140c31e8945.PNG)
 
-```
+4. Login to grafana username: admin password: admin then change the password if you wish
+
+![grafane](https://user-images.githubusercontent.com/18073289/197290209-e9638138-9372-4bf2-bd7a-53ce7b1d166c.PNG)
+
+5 You will be logged into the dashboard
+
+![grafane](https://user-images.githubusercontent.com/18073289/197290678-1e0bbdf1-1524-45fa-80b3-08369984c6c1.PNG)
+
+6. Go to Explore >> Data Source >> choose prometheus then enter https://localhost:9090 on the url and save
+
+![grafane](https://user-images.githubusercontent.com/18073289/197291135-ca3d6368-d874-46ee-a6fb-43bfc1c023ba.PNG)
+
+
+## Create a Grafana Dashboard
+
+1. Click on create >> Add New Panel
+
+![grafane](https://user-images.githubusercontent.com/18073289/197294326-5631a6eb-40cd-4376-abed-5fcbad2c2701.PNG)
+
+2. Select Prometheus and the metric you want to check
+
+![grafane](https://user-images.githubusercontent.com/18073289/197294438-59c6c72b-a5d6-45f2-9b8a-5a57d996fef9.PNG)
+
+## Import a Grafana Dashboard
+
+1. Click on import >> Enter the url >> Load >> Load
+
+![grafane](https://user-images.githubusercontent.com/18073289/197294673-948e112a-bbd5-422c-b812-911832aabf23.PNG)
+
+
+
+
+
